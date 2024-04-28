@@ -1,4 +1,5 @@
-const {Product} = require('../models')
+const {Product, sequelize} = require('../models')
+const { Op } = require('sequelize')
 
 class ProductController {
     static async getAll(req, res, next){
@@ -26,6 +27,22 @@ class ProductController {
     }
     static async edit(req, res, next){
 
+    }
+    static async search(req, res, next){
+        try {
+            const { productName } = req.query
+            console.log(productName);
+            const products = await Product.findAll({
+                where: {
+                    productName: {
+                        [Op.iLike]: `%${productName}%` //case-insensitive search
+                    }
+                }
+            })
+            res.status(200).json(products)
+        } catch (error) {
+            next(error)
+        }
     }
     static async delete(req, res, next){
         
