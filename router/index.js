@@ -1,7 +1,11 @@
 const router = require("express").Router()
 const ProductController = require('../controllers/ProductController')
+const UserController = require('../controllers/UserController')
 
 router.get('/')
+
+router.post('/login', UserController.login)
+
 router.get('/product', ProductController.getAll)
 router.post('/product', ProductController.add)
 router.get('/product/search', ProductController.search)

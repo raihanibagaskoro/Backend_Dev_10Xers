@@ -1,11 +1,13 @@
 [
       {
         "name": "John Doe",
+        "username": "john",
         "password": "abc123",
         "role": "Admin"
       },
       {
         "name": "Jane Smith",
+        "username": "jane",
         "password": "abc123",
         "role": "User"
       }
