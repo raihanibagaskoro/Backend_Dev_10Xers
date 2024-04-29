@@ -11,4 +11,4 @@
 ### How to use:
 1. Open your API Testing Tool like Postman
 2. You need to login first using the data from ```data/users.json```
-3. Use the ```access_token``` from the login response to use the API as the Headers.
+3. Use the ```access_token``` from the login response and then put it on Headers to use the API.
