@@ -12,3 +12,13 @@ app.use('/', router)
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
+
+// // Only start the server if this module is the main module
+// if (require.main === module) {
+//     app.listen(PORT, () => {
+//       console.log(`Server is running on port ${PORT}`);
+//     });
+//   }
+  
+//   module.exports = app; // Export the Express application instance
+
